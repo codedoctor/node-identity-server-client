@@ -7,6 +7,8 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.2.1
+
 ### 0.2.0
 
 * First version
@@ -18,7 +20,7 @@ Used internally for now.
 ## Publish new version
 
 * Change version in package.json
-* git tag -a v0.2.0 -m 'version 0.2.0'
+* git tag -a v0.2.1 -m 'version 0.2.1'
 * git push --tags
 * npm publish
 
