@@ -20,9 +20,13 @@ module.exports = class Users
   get: (id, cb = ->) =>
     @client.get "/users/#{id}", null, cb
 
+  getApps: (id, cb = ->) =>
+    @client.get "/users/#{id}/apps", null, cb
+
   all: (actor, cb = ->) =>
     #TODO: CHECK THIS
     @client.get "/users", actor, cb
+
 
   getX: (id, actor, cb = ->) =>
     @client.get "/users/#{id}", actor, cb

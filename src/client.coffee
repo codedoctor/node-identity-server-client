@@ -60,6 +60,7 @@ module.exports = class Client
 
     headers['authorization'] = "Bearer #{@options.bearerToken}" if @options.bearerToken
     headers['X-ClientId'] = @options.clientId if @options.clientId
+    headers['X-Act-As-ActorId'] = (actor.actorId || actor.id) if actor && (actor.actorId || actor.id)
 
     _.extend headers, @options.headers
 

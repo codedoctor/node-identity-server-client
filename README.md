@@ -7,7 +7,9 @@ Used internally for now.
 
 ## Release Notes
 
-### 0.2.1
+### 0.2.2
+* Added X-Act-As-ActorId support
+* Added get apps for user method
 
 ### 0.2.0
 
