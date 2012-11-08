@@ -7,6 +7,9 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.2.4
+* Removed a log statement.
+
 ### 0.2.3
 * added methods to add/remove provider
 
