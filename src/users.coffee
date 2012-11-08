@@ -52,4 +52,13 @@ module.exports = class Users
       password : newPassword
     @client.put "/users/#{id}/password-reset-tokens/#{token}", data, actor, cb
 
+  postIdentity: (userId,provider,v1,v2,profile,cb) =>
+    data = 
+      provider : provider
+      v1 : v1
+      v2 : v2
+      profile : profile
+    @client.post "/users/#{userId}/identities",data, null, cb
 
+  deleteIdentity: (userId,identityId,cb = ->) =>
+    @client.delete "/users/#{userId}/identities/#{identityId}", null, cb

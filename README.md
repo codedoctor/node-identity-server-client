@@ -7,6 +7,9 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.2.3
+* added methods to add/remove provider
+
 ### 0.2.2
 * Added X-Act-As-ActorId support
 * Added get apps for user method
@@ -22,7 +25,7 @@ Used internally for now.
 ## Publish new version
 
 * Change version in package.json
-* git tag -a v0.2.1 -m 'version 0.2.1'
+* git tag -a v0.2.3 -m 'version 0.2.3'
 * git push --tags
 * npm publish
 
