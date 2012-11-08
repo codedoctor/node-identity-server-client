@@ -7,6 +7,7 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.2.5
 ### 0.2.4
 * Removed a log statement.
 
@@ -28,7 +29,7 @@ Used internally for now.
 ## Publish new version
 
 * Change version in package.json
-* git tag -a v0.2.3 -m 'version 0.2.3'
+* git tag -a v0.2.5 -m 'version 0.2.5'
 * git push --tags
 * npm publish
 

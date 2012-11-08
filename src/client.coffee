@@ -45,7 +45,7 @@ module.exports = class Client
       #console.log "WE ARE HERE #{bodyBeforeJson}"
       if bodyBeforeJson and bodyBeforeJson.length > 0
         try
-          console.log "GETTING: #{bodyBeforeJson} END GETTING"
+          # console.log "GETTING: #{bodyBeforeJson} END GETTING"
           body = JSON.parse(bodyBeforeJson)
         catch e
           return callback( new Error("Invalid Body Content"), bodyBeforeJson, res.statusCode)
