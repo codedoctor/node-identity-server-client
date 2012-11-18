@@ -42,15 +42,15 @@ module.exports = class Users
       password : newPassword
     @client.put "/users/#{id}/password", data, actor, cb
 
-  requestPasswordReset: (id, actor, cb = ->) =>
+  resetPassword: (email, cb = ->) =>
     data =
-      password : newPassword
-    @client.post "/users/#{id}/password-reset-tokens", data, actor, cb
+      email : email
+    @client.post "/users/reset-password", data, null, cb
 
-  validatePasswordReset: (id, token, newPassword, actor, cb = ->) =>
+  resetPasswordToken: (token, password, cb = ->) =>
     data =
-      password : newPassword
-    @client.put "/users/#{id}/password-reset-tokens/#{token}", data, actor, cb
+      password : password
+    @client.put "/users/reset-password/#{token}", data, null, cb
 
   postIdentity: (userId,provider,v1,v2,profile,cb) =>
     data = 
@@ -62,3 +62,17 @@ module.exports = class Users
 
   deleteIdentity: (userId,identityId,cb = ->) =>
     @client.delete "/users/#{userId}/identities/#{identityId}", null, cb
+
+  getRoles: (userId,cb = ->) =>
+    @client.get "/users/#{userId}/roles", null, cb
+
+  postRoles: (userId,roles = [],cb = ->) =>
+    data = 
+      roles : roles
+    @client.post "/users/#{userId}/roles",data, null, cb
+
+  deleteRoles: (userId,role,cb = ->) =>
+    @client.delete "/users/#{userId}/roles/#{role}", null, cb
+
+
+
