@@ -7,6 +7,9 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.2.8
+users.getByIds added
+
 ### 0.2.7
 Roles added
 
@@ -36,8 +39,8 @@ Reset password fixed.
 
 * Change version in package.json
 git add . -A
-git commit -m "Upgrading to v0.2.7"
-git tag -a v0.2.7 -m 'version 0.2.7'
+git commit -m "Upgrading to v0.2.8"
+git tag -a v0.2.8 -m 'version 0.2.8'
 git push --tags
 npm publish
 

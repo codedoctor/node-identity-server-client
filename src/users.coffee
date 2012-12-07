@@ -1,3 +1,4 @@
+_ = require 'underscore'
 
 module.exports = class Users
   constructor:(@client) ->
@@ -27,6 +28,9 @@ module.exports = class Users
     #TODO: CHECK THIS
     @client.get "/users", actor, cb
 
+  getByIds: (ids = [], cb = ->) =>
+    idList = ids.join ','
+    @client.get "/users/by-ids?ids=#{idList}", null, cb
 
   getX: (id, actor, cb = ->) =>
     @client.get "/users/#{id}", actor, cb
