@@ -17,6 +17,7 @@ module.exports = class Client
     _.defaults @options,
             maxCacheItems: 1000
             maxTokenCache: 60 * 10
+            timeout : 2000
             clientId : null
             bearerToken: null # If present will be added to the request header as a
                               # bearer token (using current draft)
@@ -69,10 +70,10 @@ module.exports = class Client
       headers: headers
       body: if data then JSON.stringify data else null
       method: method
-      timeout: 2000
+      timeout: @options.timeout
      , (err, res, body) =>
        if err
-         err.status = res.statusCode
+         err.status = if res then res.statusCode || 500 else 500
          return callback(err)
 
        @_handleResult res, body, callback
@@ -91,7 +92,6 @@ module.exports = class Client
 
   delete: (path, actor, callback) =>
     headers =
-#      'Content-Type': 'application/json'
       'Accept' : 'application/json'
 
     headers['authorization'] = "Bearer #{@options.bearerToken}" if @options.bearerToken
@@ -102,9 +102,10 @@ module.exports = class Client
       uri: "#{@endpoint}#{path}"
       headers: headers
       method: 'DELETE'
+      timeout: @options.timeout
      , (err, res, body) =>
         if err
-          err.status = res.statusCode
+          err.status = if res then res.statusCode || 500 else 500
           return callback(err)
 
         @_handleResult res, body, callback
@@ -115,7 +116,6 @@ module.exports = class Client
       actor = null
 
     headers =
-#      'Content-Type': 'application/json'
       'Accept' : 'application/json'
 
     headers['authorization'] = "Bearer #{@options.bearerToken}" if @options.bearerToken
@@ -127,9 +127,10 @@ module.exports = class Client
       uri: "#{@endpoint}#{path}"
       headers: headers
       method: 'GET'
+      timeout: @options.timeout
      , (err, res, body) =>
        if err
-         err.status = res.statusCode
+         err.status = if res then res.statusCode || 500 else 500
          return callback(err)
        @_handleResult res, body, callback
 

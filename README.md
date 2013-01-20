@@ -7,6 +7,9 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.2.9
+fixed a bug that caused errors not to be propagated.
+
 ### 0.2.8
 users.getByIds added
 
@@ -39,8 +42,8 @@ Reset password fixed.
 
 * Change version in package.json
 git add . -A
-git commit -m "Upgrading to v0.2.8"
-git tag -a v0.2.8 -m 'version 0.2.8'
+git commit -m "Upgrading to v0.2.9"
+git tag -a v0.2.9 -m 'version 0.2.9'
 git push --tags
 npm publish
 
