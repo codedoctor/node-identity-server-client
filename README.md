@@ -7,17 +7,20 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.2.10
+* updated to the latest packages
+
 ### 0.2.9
-fixed a bug that caused errors not to be propagated.
+* fixed a bug that caused errors not to be propagated.
 
 ### 0.2.8
-users.getByIds added
+* users.getByIds added
 
 ### 0.2.7
-Roles added
+* Roles added
 
 ### 0.2.6
-Reset password fixed.
+* Reset password fixed.
 
 ### 0.2.5
 ### 0.2.4
@@ -42,8 +45,8 @@ Reset password fixed.
 
 * Change version in package.json
 git add . -A
-git commit -m "Upgrading to v0.2.9"
-git tag -a v0.2.9 -m 'version 0.2.9'
+git commit -m "Upgrading to v0.2.10"
+git tag -a v0.2.10 -m 'version 0.2.10'
 git push --tags
 npm publish
 
