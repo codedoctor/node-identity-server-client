@@ -7,6 +7,9 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.2.11
+* Added lookup to users
+
 ### 0.2.10
 * updated to the latest packages
 
@@ -45,8 +48,8 @@ Used internally for now.
 
 * Change version in package.json
 git add . -A
-git commit -m "Upgrading to v0.2.10"
-git tag -a v0.2.10 -m 'version 0.2.10'
+git commit -m "Upgrading to v0.2.11"
+git tag -a v0.2.11 -m 'version 0.2.11'
 git push --tags
 npm publish
 

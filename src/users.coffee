@@ -32,6 +32,9 @@ module.exports = class Users
     idList = ids.join ','
     @client.get "/users/by-ids?ids=#{idList}", null, cb
 
+  lookup: (q, cb = ->) =>
+    @client.get "/users/lookup?q=#{encodeURIComponent(q)}", null, cb
+
   getX: (id, actor, cb = ->) =>
     @client.get "/users/#{id}", actor, cb
 
