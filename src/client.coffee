@@ -8,6 +8,7 @@ Apps = require './apps'
 Identities = require './identities'
 Organizations = require './organizations'
 Scopes = require './scopes'
+Lookup = require './lookup'
 
 module.exports = class Client
   constructor: (@endpoint, @options = {}) ->
@@ -32,6 +33,7 @@ module.exports = class Client
     @sessions = new Sessions @
     @tokenInfos = new TokenInfos @
     @users = new Users @
+    @lookup = new Lookup @
 
   _cleanEndpoint: (endpoint) =>
     return null unless endpoint
