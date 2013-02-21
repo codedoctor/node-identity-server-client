@@ -7,6 +7,9 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.2.13
+* get users by username
+
 ### 0.2.12
 * fixed wrong lookup route
 
@@ -51,8 +54,8 @@ Used internally for now.
 
 * Change version in package.json
 git add . -A
-git commit -m "Upgrading to v0.2.12"
-git tag -a v0.2.12 -m 'version 0.2.12'
+git commit -m "Upgrading to v0.2.13"
+git tag -a v0.2.13 -m 'version 0.2.13'
 git push --tags
 npm publish
 

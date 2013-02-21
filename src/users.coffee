@@ -32,6 +32,10 @@ module.exports = class Users
     idList = ids.join ','
     @client.get "/users/by-ids?ids=#{idList}", null, cb
 
+  getByUsernames: (usernames = [], cb = ->) =>
+    usernames = _.map usernames, (x) -> encodeURIComponent(x)
+    usernameList =  usernames.join ','
+    @client.get "/users/by-usernames?usernames=#{usernameList}", null, cb
 
   getX: (id, actor, cb = ->) =>
     @client.get "/users/#{id}", actor, cb
