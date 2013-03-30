@@ -7,6 +7,9 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.2.14
+* Updating depending libs to current version - aka housekeeping
+
 ### 0.2.13
 * get users by username
 
@@ -54,8 +57,8 @@ Used internally for now.
 
 * Change version in package.json
 git add . -A
-git commit -m "Upgrading to v0.2.13"
-git tag -a v0.2.13 -m 'version 0.2.13'
+git commit -m "Upgrading to v0.2.14"
+git tag -a v0.2.14 -m 'version 0.2.14'
 git push --tags
 npm publish
 
