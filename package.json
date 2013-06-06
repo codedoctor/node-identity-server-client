@@ -2,7 +2,7 @@
   "author": "Martin Wawrusch <martin@wawrusch.com> (http://martinatsunset.com)",
   "name": "identity-server-client",
   "description": "A client to connect to our identity server.",
-  "version": "0.2.14",
+  "version": "0.2.15",
   "main" : "lib/index.js",
   "repository": {
     "type": "git",
@@ -27,14 +27,14 @@
   },
   "dependencies": {
     "underscore": "1.4.4",
-    "request": "2.16.6",
+    "request": "2.21.0",
     "pkginfo" : "0.3.0"
   },
   "devDependencies": {
-    "async": "0.2.6",
-    "coffee-script": "1.6.2",
+    "async": "0.2.9",
+    "coffee-script": "1.6.3",
     "should": "1.2.2",
-    "mocha": "1.8.2"
+    "mocha": "1.10.0"
 
   },
   "bugs": { "url": "http://github.com/codedoctor/node-identity-server-client/issues" },

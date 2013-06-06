@@ -20,6 +20,7 @@ module.exports = class Client
             maxTokenCache: 60 * 10
             timeout : 2000
             clientId : null
+            strictSSL : false # Yeah, don't even get me started on this one.
             bearerToken: null # If present will be added to the request header as a
                               # bearer token (using current draft)
             headers: {}
